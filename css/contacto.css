@@ -131,6 +131,11 @@ input, textarea {
     cursor: pointer;
 } 
 
+/*=============== FOOTER ============*/
+.footer__2 ul li a {
+    color: var(--font-color-socials);
+}
+
 
 /* ===============media tablet =============*/
 @media screen and (max-width:1024px) {
