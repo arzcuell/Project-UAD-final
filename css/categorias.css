@@ -1,8 +1,5 @@
 
 :root {
-
-    
-    
     --bg-color-pink-darkBlue: #FCD4D6;
     --color-bg1: rgba(253, 253, 253, 0.7);
     --bg-color-pink-lightBlue: #FCD4D6;
@@ -10,13 +7,9 @@
     --font-red-white: #B00D13;
     --bg-color-white-darkBlue: #fff;
     --bg-color-red-orange: #B00D13;
-
 }
-.dark-theme {
 
-    
-    
-    
+.dark-theme {
     --bg-color-pink-darkBlue: #1f2641;
     --color-bg1: #2e3267;
     --bg-color-pink-lightBlue: #6c63ff;
@@ -24,20 +17,15 @@
     --font-red-white: #FFF;
     --bg-color-white-darkBlue: #424890;
     --bg-color-red-orange: #f75842;
-
-}
-
-.courses {
-    padding-top: 10rem;
 }
 
 
+h2:not(:first-child) {
+    margin-top: 5rem;
+}
 
 
-
-
-/*===============navbar=============*/
-
+/*=============== NAVBAR =============*/
 nav {
     background-color: var(--bg-color-red-lightBlue);
 }
@@ -46,13 +34,11 @@ nav {
     display: flex;
     justify-content: space-between;
     background-color: var(--bg-color-red-lightBlue);
-    /* width: 100%; */
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center; 
 }
-
 
 .contact__container {
     background: var(--color-bg1);
@@ -63,4 +49,23 @@ nav {
     height: 30rem;
     margin: 7rem auto;
     border-radius: 1rem;
+}
+
+
+/*=============== COURSES ============*/
+.courses {
+    padding-top: 10rem;
+}
+
+.course img {
+    width: 100%;
+    /* height: 33.33%; */
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*=============== FOOTER ============*/
+.footer__2 ul li a {
+    color: var(--font-color-socials);
 }

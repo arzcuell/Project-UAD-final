@@ -166,6 +166,13 @@
     padding: 1rem;
 }
 
+/*=============== FOOTER ============*/
+.footer__2 ul li a {
+    color: var(--font-color-socials);
+}
+
+
+
 /* ======= MEDIA QUERIES TABLET ======*/
 
 @media screen and (max-width:1024px) {
