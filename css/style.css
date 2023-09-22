@@ -588,8 +588,7 @@ nav button#toggle-menu-btn:hover {
 }
 
 .footer__2 li a {
-    color: v
-    ar(--font-color2)
+    color: var(--font-color2);
 }
 
 .footer__socials {
