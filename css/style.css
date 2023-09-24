@@ -19,7 +19,7 @@
     --color-bg-categories:#2e3267;
     --color-bg-courses:#;
     --color-bg-faqs:#2e3267;
-    --color-bg-footer:#424890;
+    --color-bg-footer:#FFF;
     --color-bg-footer-copyright:#B00D13;
     --color-bg-testimonials:#;
     --color-black: #000;
@@ -558,8 +558,9 @@ nav button#toggle-menu-btn:hover {
 
 /* ==================== FOOTER ============================*/
 .footer {
-    /* padding-top: 5rem; */
+    /* padding-top: 1rem; */
     font-size: .9rem;
+    background-color: var(--color-bg-footer);
 }
 
 .footer__container {
