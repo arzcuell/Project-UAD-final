@@ -112,7 +112,7 @@ body {
 }
 
 section {
-    padding: 6rem 0;
+    padding: 5rem 0;
 }
 
 section h2 {
@@ -576,7 +576,7 @@ nav button#toggle-menu-btn:hover {
 
 /* ==================== FOOTER ============================*/
 .footer {
-    /* padding-top: 1rem; */
+    padding-top: 1rem;
     font-size: .9rem;
     background-color: var(--color-bg-footer);
 }
@@ -585,6 +585,7 @@ nav button#toggle-menu-btn:hover {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap:5rem;
+    height: fit-content;
 }
 
 .footer__container > div h4 {
@@ -626,7 +627,7 @@ nav button#toggle-menu-btn:hover {
     background: var(--color-bg-footer-copyright);
     color: var(--color-white);
     text-align: center;
-    /* margin-top: 4rem; */
+    margin-top: 0;
     padding: 1.2rem 0;
     border-top: 1px solid var(--color-white);
 }
