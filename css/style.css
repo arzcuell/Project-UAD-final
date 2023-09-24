@@ -297,11 +297,10 @@ nav button#toggle-menu-btn:hover {
     background: var(--color-btn-primary);
 }
 
-
 /* ==================== CATEGORIES ========================*/
 .categories {
     background: var(--light-bg);
-    height: 32rem;
+    height: fit-content;
 }
 
 .categories h1 {
@@ -310,6 +309,7 @@ nav button#toggle-menu-btn:hover {
     margin-bottom: 3rem;
     margin-top: 0;
     padding-top: 0;
+    font-size: 2.1rem;
 }
 
 .category h5 {
@@ -426,6 +426,7 @@ nav button#toggle-menu-btn:hover {
     background-image: var(--textured-bg);
     margin-top: 10rem;
     box-shadow: inset 0 0 3rem rgba(0,0,0,0.5);
+    margin-top: 0;
 }
 
 .courses__container {
@@ -465,7 +466,7 @@ nav button#toggle-menu-btn:hover {
 .testimonials__container {
     overflow-x: hidden;
     position: relative;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
 }
 
 .testimonial {
@@ -557,7 +558,7 @@ nav button#toggle-menu-btn:hover {
 
 /* ==================== FOOTER ============================*/
 .footer {
-    padding-top: 5rem;
+    /* padding-top: 5rem; */
     font-size: .9rem;
 }
 
@@ -606,7 +607,7 @@ nav button#toggle-menu-btn:hover {
     background: var(--color-bg-footer-copyright);
     color: var(--color-white);
     text-align: center;
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
     padding: 1.2rem 0;
     border-top: 1px solid var(--color-white);
 }
@@ -638,6 +639,9 @@ nav button#toggle-menu-btn:hover {
         font-size: 1.2rem;
     }
 
+    section {
+        padding: 3rem 0;
+    }
 
     /*=============== navbar ===============*/
     nav button {
@@ -774,6 +778,9 @@ nav button#toggle-menu-btn:hover {
         height: 100vh;
     }
 
+    section {
+        padding: 2rem 0;
+    }
     .container {
         width: var(--container-width-sm);
     }
