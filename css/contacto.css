@@ -71,6 +71,15 @@ nav {
     margin-bottom: 2rem;
 }
 
+.contact__aside i {
+    color: var(--font-red-white);
+}
+
+.contact__details li {
+    display: flex;
+    justify-content: start;
+    line-height: 20px;
+}
 .contact__details li {
     display: flex;
     gap: 1rem;
@@ -89,7 +98,7 @@ nav {
     color: var(--font-red-white);
     padding: .5rem;
     border-radius: 50%;
-    font-size: 1.1rem;
+    font-size: .9rem;
     transition: var(--transition);
 }
 
