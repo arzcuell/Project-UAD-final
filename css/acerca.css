@@ -50,17 +50,17 @@
 
 
 
-.about_achievements {
+.about__achievements {
     margin-top: 3rem;
 }
 
-.about_achievements-container {
+.about__achievements-container {
     display: grid;
     grid-template-columns: 40% 60%;
     gap: 5rem;
 }
 
-.about_achievements-right > p {
+.about__achievements-right > p {
     margin: 1.6rem 0 2.5rem;
 }
 
@@ -75,6 +75,7 @@
     padding: 1.6rem;
     border-radius: 1rem;
     text-align: center;
+    transition: var(--transition);
 }
 
 .achievement__card:hover {
@@ -180,16 +181,16 @@
 /* ======= MEDIA QUERIES TABLET ======*/
 
 @media screen and (max-width:1024px) {
-    .about_achievements {
+    .about__achievements {
         margin-top: 2rem;
     }
 
-    .about_achievements-container {
+    .about__achievements-container {
         grid-template-columns: 1fr;
         gap: 4rem;
     }
 
-    .about_achievements-left {
+    .about__achievements-left {
         width: 80%;
         margin: 0 auto;
     }
