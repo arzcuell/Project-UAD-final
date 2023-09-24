@@ -239,15 +239,33 @@ nav button#toggle-menu-btn:hover {
     gap: 4rem;
 }
 
-.nav__menu a {
+.nav__menu li a {
+    display: inline-block;
+    position: relative;
     font-size: .9rem;
     transition: var(--transition);
     letter-spacing: 0.15em;
+    text-decoration: none;
+    padding: 0 .7rem;
+}
+
+.nav__menu li a::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -0.4rem;
+    transition: width 0.25s ease-in-out;
+}
+
+.nav__menu li a:hover::before {
+    width: 100%;
 }
 
 .nav__menu a:hover {
-    color: var(--color-bg2);
-    font-weight: bolder;
+    color: var(--color-white);
 }
 
 
