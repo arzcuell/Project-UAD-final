@@ -136,6 +136,16 @@ input, textarea {
     color: var(--font-color-socials);
 }
 
+.footer {
+    padding-top: 3rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+}
+
+.footer__copyright {
+    margin-top: 4rem;
+    /* padding: 1.2rem 0; */
+}
+
 
 /* ===============media tablet =============*/
 @media screen and (max-width:1024px) {
