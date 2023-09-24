@@ -734,7 +734,8 @@ nav button#toggle-menu-btn:hover {
     
     /*=============== header ===============*/
     .header {
-        height: 52vh;
+        height: fit-content;
+        /* height: 52vh; */
         margin-bottom: 4rem;
         
     }
@@ -794,7 +795,8 @@ nav button#toggle-menu-btn:hover {
 /* ================ @MEDIA FOR PHONES ================*/
 @media screen and (max-width:600px) {
     header {
-        height: 100vh;
+        height: fit-content;
+        /* height: 100vh; */
     }
 
     section {
@@ -891,9 +893,17 @@ nav button#toggle-menu-btn:hover {
     .container {
         margin: auto;
     }
+
+    .btn-primary {
+        display: none;
+    }
 }
 
 @media screen and (max-width:375px) {
+    body {
+        min-width: 320px;
+    }
+    
     .container {
         width: var(--container-width-sm);
         margin: 0 auto;
