@@ -9,6 +9,20 @@ const faqs = document.querySelectorAll('.faq');
 
 faqs.forEach(faq => {
     faq.addEventListener('click', () => {
+        
+        //if there are some faq open, then close all
+        faqs.forEach(item => {
+            if(item !== faq) {
+                item.classList.remove('open')
+                //change de icon for all
+                const icon = item.querySelector('.faq__icon i');
+                if(icon.className === 'uil uil-minus') {
+                    icon.className = 'uil uil-plus'
+                }
+            }
+        });
+
+        //toggle faq open/close
         faq.classList.toggle('open')
 
         //change de icon
