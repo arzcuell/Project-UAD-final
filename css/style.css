@@ -12,7 +12,7 @@
 
 
 :root {
-    --color-avatar: #FEEFEF;
+    --color-avatar: #B00D13;
     --color-bg: none;
     --color-bg1: #fff;
     --color-bg2: #FCD4D6;
@@ -454,10 +454,25 @@ nav button#toggle-menu-btn:hover {
 }
 
 .course {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     background: var(--color-bg1);
     text-align: center;
     border: 1px solid transparent;
     transition: var(--transition);
+    /* overflow: hidden; */
+}
+
+.course__image {
+    flex: 1;
+}
+
+.course__image img {
+    width: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .course:hover{
@@ -466,7 +481,14 @@ nav button#toggle-menu-btn:hover {
 }
 
 .course__info {
-    padding: 2rem;
+    flex: 3;
+
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 35vh;
 }
 
 .course__info p{
@@ -510,6 +532,7 @@ nav button#toggle-menu-btn:hover {
     margin-top: 3rem;
     position: relative;
     border-radius: 20px;
+    border: 1px solid var(--color-avatar);
 }
 
 .testimonial__body::before {
@@ -522,6 +545,8 @@ nav button#toggle-menu-btn:hover {
     left: 45%;
     top: -1.5rem;
     transform: rotate(45deg);
+    border-left: 1px solid var(--color-avatar);
+    border-top: 1px solid var(--color-avatar);
 }
 
 .testimonial__body p {
