@@ -673,14 +673,18 @@ nav button#toggle-menu-btn:hover {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
-    z-index: 1000;
-  }
+    z-index: 999;
+}
 
-  .popup-active {
-    overflow: hidden;
-  }
-  
-  .popup-content {
+.popup-hide {
+    opacity: 0;
+}
+
+.popup-active {
+overflow: hidden;
+}
+
+.popup-content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -694,52 +698,53 @@ nav button#toggle-menu-btn:hover {
 .popup-content video {
     max-width: 100%;
 }
-  
-  .popup-content label {
-      display: block;
-    margin-top: 10px;
-  }
-  .popup-content .close-btn {
-    position: absolute;
-    top: 4px;
-    right: 5px;
-    background-color: blue;
-    width: 1rem;
-    height: 1rem;
-    font-size: .9rem;
-    color: var(--color-white);
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-  }
-  
-  .popup-content .close-btn:focus {
-    outline: none;
-  }
-  
-  .popup-content .close-btn:hover {
-    color: red;
-  }
-  .popup-content span {
-    font-size: .7rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .5rem;
-    font-weight:  bolder;
-    max-width: max-content;
-    margin-left: auto;
+
+.popup-content label {
+    display: block;
+margin-top: 10px;
+}
+.popup-content .close-btn {
+position: absolute;
+top: 4px;
+right: 5px;
+background-color: blue;
+width: 1rem;
+height: 1rem;
+font-size: .9rem;
+color: var(--color-white);
+border-radius: 50%;
+border: none;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: flex-end;
 }
 
-  .popup-content span:hover {
+.popup-content .close-btn:focus {
+outline: none;
+}
+
+.popup-content .close-btn:hover {
+color: red;
+}
+.popup-content span {
+font-size: .7rem;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: .5rem;
+font-weight:  bolder;
+max-width: max-content;
+margin-left: auto;
+}
+
+.popup-content span:hover {
+cursor: pointer;
+transform: scale(.95);
+}
+.popup-content input:hover {
     cursor: pointer;
-  }
-  .popup-content input:hover {
-    cursor: pointer;
-  }
+}
 
 
 
