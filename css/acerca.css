@@ -6,6 +6,7 @@
     --font-red-white: #B00D13;
     --bg-color-white-darkBlue: #fff;
     --bg-color-red-orange: #B00D13;
+    --textured-bg: url(/assets/images/bg-texture.png);
 }
 
 .dark-theme {
@@ -16,6 +17,7 @@
     --font-red-white: #FFF;
     --bg-color-white-darkBlue: #424890;
     --bg-color-red-orange: #f75842;
+    --textured-bg: none;
 }
 
 
@@ -52,6 +54,7 @@ nav {
     display: grid;
     grid-template-columns: 40% 60%;
     gap: 5rem;
+    margin-top: 5rem;
 }
 
 .about__achievements-right > p {
@@ -102,6 +105,7 @@ nav {
 .team {
     background: var(--color-bg1);
     box-shadow: inset 0 0 .3rem rgba(0,0,0,0.5);
+    background-image: var(--textured-bg);
 }
 
 .team__container {
