@@ -90,11 +90,7 @@ if (!getCookie("popupClosed")) {
 
 // Escuchar clic en el botón de cerrar
 document.querySelector(".close-btn").addEventListener("click", function() {
-// Crear cookie con duración de 30 días
-// setCookie("popupClosed", true, 30);
-// Ocultar popup
 document.querySelector(".popup").style.display = "none";
-// Pausar video
 document.querySelector(".popup-content video").pause();
 });
 
