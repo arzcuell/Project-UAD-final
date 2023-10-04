@@ -23,6 +23,7 @@
     --color-bg-footer-copyright:#B00D13;
     --color-bg-testimonials:#;
     --color-black: #000;
+    --color-btn-close: #B00d13;
     --color-btn1: #fff;
     --color-btn-primary: #FFF;
     --color-btn-secondary: #f75842;
@@ -69,6 +70,7 @@
     --color-bg-footer:#424890;
     --color-bg-footer-copyright: #6c63ff;
     --color-bg-testimonials:#;
+    --color-btn-close: #f75842;
     --color-btn1: transparent;
     --color-btn-primary: #f75842;
     --color-btn-secondary: #f75842;
@@ -579,7 +581,7 @@ nav button#toggle-menu-btn:hover {
 
 .faq h4 {
     font-size: 1rem;
-    line-height: 2.2rem;
+    line-height: 1.2rem;
     color: var(--font-color2);
 }
 
@@ -660,6 +662,102 @@ nav button#toggle-menu-btn:hover {
 .footer__logo {
     color: var(--color-primary);
 }
+
+
+/* ==================== POPUP ============================*/
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+  }
+
+  .popup-active {
+    overflow: hidden;
+  }
+  
+  .popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255,255,255,0.9);
+    padding: 20px;
+    text-align: center;
+    color: var(--color-black);
+}
+
+.popup-content video {
+    max-width: 100%;
+}
+  
+  .popup-content label {
+      display: block;
+    margin-top: 10px;
+  }
+  .popup-content .close-btn {
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    background-color: blue;
+    width: 1rem;
+    height: 1rem;
+    font-size: .9rem;
+    color: var(--color-white);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  .popup-content .close-btn:focus {
+    outline: none;
+  }
+  
+  .popup-content .close-btn:hover {
+    color: red;
+  }
+  .popup-content span {
+    font-size: .7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    font-weight:  bolder;
+    max-width: max-content;
+    margin-left: auto;
+}
+
+  .popup-content span:hover {
+    cursor: pointer;
+  }
+  .popup-content input:hover {
+    cursor: pointer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ==================== @MEDIA FOR TABLETS ================*/
