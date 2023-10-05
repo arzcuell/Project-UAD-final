@@ -621,6 +621,8 @@ nav button#toggle-menu-btn:hover {
 
 .footer__1 p {
     margin: 0 0 2rem;
+    text-align: justify;
+    max-width: 14vw;
 }
 
 .footer__5 img {
