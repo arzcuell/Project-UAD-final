@@ -684,7 +684,7 @@ nav button#toggle-menu-btn:hover {
 }
 
 .popup-active {
-overflow: hidden;
+    overflow: hidden;
 }
 
 .popup-content {
@@ -704,47 +704,50 @@ overflow: hidden;
 
 .popup-content label {
     display: block;
-margin-top: 10px;
+    margin-top: 10px;
 }
+
 .popup-content .close-btn {
-position: absolute;
-top: 4px;
-right: 5px;
-background-color: blue;
-width: 1rem;
-height: 1rem;
-font-size: .9rem;
-color: var(--color-white);
-border-radius: 50%;
-border: none;
-cursor: pointer;
-display: flex;
-justify-content: center;
-align-items: flex-end;
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    background-color: rgb(45, 45, 248);
+    width: 1rem;
+    height: 1rem;
+    font-size: .9rem;
+    color: var(--color-white);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .popup-content .close-btn:focus {
-outline: none;
+    outline: none;
 }
 
 .popup-content .close-btn:hover {
-color: red;
+    transform: scale(0.9);
 }
+
 .popup-content span {
-font-size: .7rem;
-display: flex;
-justify-content: center;
-align-items: center;
-gap: .5rem;
-font-weight:  bolder;
-max-width: max-content;
-margin-left: auto;
+    font-size: .7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    font-weight:  bolder;
+    max-width: max-content;
+    margin-left: auto;
 }
 
 .popup-content span:hover {
-cursor: pointer;
-transform: scale(.95);
+    cursor: pointer;
+    color: #B00D13;
 }
+
 .popup-content input:hover {
     cursor: pointer;
 }
