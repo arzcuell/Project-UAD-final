@@ -92,6 +92,7 @@ if (!getCookie("popupClosed")) {
 document.querySelector(".close-btn").addEventListener("click", function() {
 document.querySelector(".popup").style.display = "none";
 document.querySelector(".popup-content video").pause();
+enableScroll();
 });
 
 // Escuchar cambios en el checkbox
@@ -103,6 +104,7 @@ if (this.checked) {
     document.querySelector(".popup").style.display = "none";
     // Pausar video
     document.querySelector(".popup-content video").pause();
+    enableScroll();
 }
 });
 
@@ -128,3 +130,14 @@ for(var i=0;i < ca.length;i++) {
 }
 return null;
 };
+
+
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++ EVITAR SCROLL CUANDO EL POPUP ESTA ACTIVO +++++++++++++++++++++++++++++++++++++++++
+
+
+// Deshabilitar el scroll en la página principal
+function enableScroll() {
+    document.body.style.overflow = 'visible';
+}
