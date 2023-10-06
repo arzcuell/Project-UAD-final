@@ -111,7 +111,7 @@ body {
     color: var(--font-color2);
     background: var(--color-bg);
     transition: background .4s ease-in-out;
-    overflow: hidden;
+    overflow: auto;
 }
 
 section {

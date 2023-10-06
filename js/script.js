@@ -86,6 +86,7 @@ if(localStorage.getItem('dark-theme') === 'true') {
 // Mostrar popup si la cookie no existe
 if (!getCookie("popupClosed")) {
     document.querySelector(".popup").style.display = "block";
+    document.body.style.overflow = "hidden";
 };
 
 // Escuchar clic en el botón de cerrar
@@ -98,8 +99,8 @@ enableScroll();
 // Escuchar cambios en el checkbox
 document.querySelector("#popup-checkbox").addEventListener("change", function() {
 if (this.checked) {
-    // Crear cookie con duración de 60 días
-    setCookie("popupClosed", true, 60);
+    // Crear cookie con duración de 90 días
+    setCookie("popupClosed", true, 90);
     // Ocultar popup
     document.querySelector(".popup").style.display = "none";
     // Pausar video
