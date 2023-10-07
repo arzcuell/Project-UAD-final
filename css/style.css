@@ -669,14 +669,15 @@ nav button#toggle-menu-btn:hover {
 
 /* ==================== POPUP ============================*/
 .popup {
+    display: none;
     position: fixed;
-    top: 0;
+    z-index: 999;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    z-index: 999;
+    animation: fadeIn 0.5s;
 }
 
 .popup-hide {
@@ -695,9 +696,15 @@ nav button#toggle-menu-btn:hover {
     background-color: rgba(255,255,255,0.9);
     padding: 20px;
     text-align: center;
-    color: var(--color-black);
+    color: var(--color-black);    
+    border: 1px solid #888;
+    animation: fadeIn 0.5s;
 }
 
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 .popup-content video {
     max-width: 100%;
 }
@@ -751,25 +758,6 @@ nav button#toggle-menu-btn:hover {
 .popup-content input:hover {
     cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* ==================== @MEDIA FOR TABLETS ================*/
@@ -925,6 +913,20 @@ nav button#toggle-menu-btn:hover {
     .footer__container {
         grid-template-columns: 1fr 1fr;
     }
+    
+    /*=============== popup ===============*/
+    .popup-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 740px;
+        max-height: max-content;
+        padding: .2rem;
+    }
+
+    .popup-content span {
+            font-size: .6rem;
+    }
 }
 
 
@@ -953,7 +955,7 @@ nav button#toggle-menu-btn:hover {
     }
     
     .header__left p {
-        margin-bottom: 1.3rem;
+        margin-bottom: 0;
     }
 
     .header__right-image {
@@ -1013,6 +1015,20 @@ nav button#toggle-menu-btn:hover {
     .waviy {
         font-size: 1.6rem;
     }
+    
+    /* ================ popup ================ */
+    .popup-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 550px;
+        max-height: auto;
+        padding: .2rem;
+    }
+
+    .popup-content span {
+        font-size: .5rem;
+    }
 }
 
 @media screen and (max-width:405px) {
@@ -1032,6 +1048,20 @@ nav button#toggle-menu-btn:hover {
 
     .btn-primary {
         display: none;
+    }
+
+
+    .popup-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 95vw;
+     height: auto;
+        padding: .9rem;
+    }
+
+    .popup-content span {
+        font-size: .5rem;
     }
 }
 
@@ -1075,4 +1105,18 @@ nav button#toggle-menu-btn:hover {
     .categories__left {
         margin-top: .5;
     }
+
+
+    .popup-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 95vw;
+        height: auto;
+        padding: .2rem;
+    }
+
+    .popup-content span {
+        font-size: .5rem;
+}
 }
