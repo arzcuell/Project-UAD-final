@@ -55,6 +55,7 @@ nav {
 /*=============== COURSES ============*/
 .courses {
     padding-top: 10rem;
+    background-image: none;
 }
 
 .course img {
@@ -63,6 +64,20 @@ nav {
     justify-content: center;
     align-items: center;
 }
+
+.banks-section {
+    padding-top: 0;
+}
+.course__info:hover {
+    background-image: var(--textured-bg);
+}
+.logistic-section {
+    background-image: var(--textured-bg);
+}
+.crs-section {
+    background-image: var(--textured-bg);
+}
+
 
 
 /*=============== FOOTER ============*/
