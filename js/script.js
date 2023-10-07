@@ -84,10 +84,17 @@ if(localStorage.getItem('dark-theme') === 'true') {
 
 
 // Mostrar popup si la cookie no existe
-if (!getCookie("popupClosed")) {
-    document.querySelector(".popup").style.display = "block";
-    document.body.style.overflow = "hidden";
-};
+
+
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        // Your code to open the modal goes here
+        if (!getCookie("popupClosed")) {
+            document.querySelector(".popup").style.display = "block";
+            document.body.style.overflow = "hidden";
+        };
+    }, 1000); // 1000 milliseconds = 1 seconds
+});
 
 // Escuchar clic en el botón de cerrar
 document.querySelector(".close-btn").addEventListener("click", function() {
