@@ -1,0 +1,119 @@
+
+:root {
+    --bg-color-red-lightBlue: #B00D13;
+
+}
+
+.dark-theme {
+    --bg-color-red-lightBlue: #6c63ff;
+}
+
+main {
+    max-width: 80vw;
+    margin: auto
+}
+
+h2 {
+    font-size: 3rem;
+    margin-top: 7rem;
+}
+h4 {
+    font-size: 1.5rem;
+}
+
+
+
+nav {
+    background-color: var(--bg-color-red-lightBlue);
+}
+
+ol {
+    margin: 3rem 0;
+}
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-color-red-lightBlue);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.contact__container {
+    background: var(--color-bg1);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 4rem;
+    height: 30rem;
+    margin: 7rem auto;
+    border-radius: 1rem;
+}
+
+
+.cintillo {
+    max-width: 70vw;
+    margin:auto;
+}
+
+.crs > img {
+    margin-bottom: 4rem;;
+}
+
+
+.crs__info p{
+    font-size: 1.3rem;
+    max-width: 70vw;
+    margin: 1rem 0;
+    text-align: justify;
+}
+
+
+
+
+
+
+
+article {
+    margin: 5rem 0;
+}
+
+table {
+    width: 50vw;
+    border-collapse: collapse;
+    margin: 4rem auto;
+    white-space: nowrap;
+    font-size: 1.6rem;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: var(--bg-color-red-lightBlue);
+    color: var(--color-white)
+}
+
+.crs__info li {
+    list-style-type: disc;
+    margin-left: 3rem;
+    font-size: 1.3rem;
+}
+
+span {
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 1024px) {
+    table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    font-size: 1rem;
+    margin: auto;
+}
+}
