@@ -739,7 +739,7 @@ nav button#toggle-menu-btn:hover {
     transform: scale(0.9);
 }
 
-.popup-content span {
+.popup-content label {
     font-size: .7rem;
     display: flex;
     justify-content: center;
@@ -750,7 +750,7 @@ nav button#toggle-menu-btn:hover {
     margin-left: auto;
 }
 
-.popup-content span:hover {
+.popup-content label:hover {
     cursor: pointer;
     color: #B00D13;
 }
@@ -887,7 +887,16 @@ nav button#toggle-menu-btn:hover {
     .categories__left img {
         display: none;
     }
-    
+
+    .categories__left {
+        display: grid;
+        grid-template-rows: auto;
+        margin: 5px;
+        height: auto;
+    }
+    .categories__left h1 {
+        margin-bottom: 3rem;
+    }
     
     /*=============== popular courses ===============*/
     .courses {
@@ -924,7 +933,7 @@ nav button#toggle-menu-btn:hover {
         padding: .2rem;
     }
 
-    .popup-content span {
+    .popup-content label {
             font-size: .6rem;
     }
 }
@@ -955,7 +964,7 @@ nav button#toggle-menu-btn:hover {
     }
     
     .header__left p {
-        margin-bottom: 0;
+        margin-bottom: 0;    
     }
 
     .header__right-image {
@@ -980,6 +989,16 @@ nav button#toggle-menu-btn:hover {
 
     .categories__left img {
         display: none;
+    }
+    
+    .categories__left {
+        display: grid;
+        grid-template-rows: auto;
+        margin: 5px;
+        height: auto;
+    }
+    .categories__left h1 {
+        margin-bottom: 3rem;
     }
 
     
@@ -1026,7 +1045,7 @@ nav button#toggle-menu-btn:hover {
         padding: .2rem;
     }
 
-    .popup-content span {
+    .popup-content label {
         font-size: .5rem;
     }
 }
@@ -1060,7 +1079,7 @@ nav button#toggle-menu-btn:hover {
         padding: .9rem;
     }
 
-    .popup-content span {
+    .popup-content label {
         font-size: .5rem;
     }
 }
@@ -1116,7 +1135,7 @@ nav button#toggle-menu-btn:hover {
         padding: .2rem;
     }
 
-    .popup-content span {
+    .popup-content label {
         font-size: .5rem;
 }
 }
