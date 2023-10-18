@@ -149,3 +149,43 @@ return null;
 function enableScroll() {
     document.body.style.overflow = 'visible';
 }
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++ MODAL FOR MINIMUM BROWSER VERSION +++++++++++++++++++++++++++++++++++++++++
+// Objeto con las versiones mínimas necesarias para cada navegador
+const minimalBrowserVersions = {
+    chrome: 119,
+    firefox: 45,
+    safari: 10,
+    edge: 14,
+    opera: 37,
+};
+
+// Función para obtener el navegador y la versión del usuario
+function getBrowserInfo() {
+    let userAgent = navigator.userAgent, temp,
+        M = userAgent.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+    if (/trident/i.test(M[1])) {
+        temp = /\brv[ :]+(\d+)/g.exec(userAgent) || [];
+        return {name: 'IE', version: (temp[1] || '')};
+    }
+    if (M[1] === 'Chrome') {
+        temp = userAgent.match(/\b(OPR|Edge)\/(\d+)/);
+        if (temp != null) return {name: temp[1].replace('OPR', 'Opera'), version: temp[2]};
+    }
+    M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?'];
+    if ((temp = userAgent.match(/version\/(\d+)/i)) != null) M.splice(1, 1, temp[1]);
+    return {name: M[0], version: M[1]};
+}
+
+// Función para mostrar el modal si el navegador no cumple con la versión mínima
+function checkBrowserVersion() {
+    let browserInfo = getBrowserInfo();
+    let browserName = browserInfo.name.toLowerCase();
+    let browserVersion = parseInt(browserInfo.version);
+
+    if (browserName in minimalBrowserVersions && browserVersion < minimalBrowserVersions[browserName]) {
+        // Mostrar el modal con la información de actualización del navegador
+        alert(`Por favor, actualice su navegador ${browserName} a la versión ${minimalBrowserVersions[browserName]} o superior para una mejor experiencia en este sitio web.`);
+    }
+}
