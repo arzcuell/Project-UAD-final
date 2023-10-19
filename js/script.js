@@ -3,13 +3,11 @@ window.addEventListener('scroll', () => {
     document.querySelector('nav').classList.toggle('window-scroll',window.scrollY>0);
 });
 
-
 //show or hide faq answer
 const faqs = document.querySelectorAll('.faq');
 
 faqs.forEach(faq => {
     faq.addEventListener('click', () => {
-        
         //if there are some faq open, then close all
         faqs.forEach(item => {
             if(item !== faq) {
@@ -35,7 +33,6 @@ faqs.forEach(faq => {
     })
 });
 
-
 /* nav menu on screens less than 1024px*/
 const menu = document.querySelector('.nav__menu');
 const menuBtn = document.querySelector('#open-menu-btn');
@@ -46,7 +43,6 @@ menuBtn.addEventListener('click', () => {
     closeBtn.style.display = "inline-block";
     menuBtn.style .display = "none";
 });
-
 
 //close nav menu
 const closeNav = () => {
@@ -72,8 +68,7 @@ icon.onclick = function() {
     }    
 };
 
-
-// modo oscuro persistente
+// persistent dark mode
 if(localStorage.getItem('dark-theme') === 'true') {
     document.body.classList.add("dark-theme");
     icon.innerHTML = "<i class='uil uil-sun'></i>";
@@ -82,95 +77,75 @@ if(localStorage.getItem('dark-theme') === 'true') {
     icon.innerHTML = "<i class='uil uil-moon'></i>";
 };
 
-
-// Mostrar popup si la cookie no existe
-
-
+// Show popup if the cookie does not exist
+// Show popup if the localStorage item does not exist
 window.addEventListener('load', function() {
     setTimeout(function() {
         // Your code to open the modal goes here
-        if (!getCookie("popupClosed")) {
+        if (!getLocalStorage("popupClosed")) {
             document.querySelector(".popup").style.display = "block";
             document.body.style.overflow = "hidden";
-        };
+        }
     }, 1000); // 1000 milliseconds = 1 seconds
 });
 
-// Escuchar clic en el botón de cerrar
+// Listen for click on the close button
 document.querySelector(".close-btn").addEventListener("click", function() {
-document.querySelector(".popup").style.display = "none";
-document.querySelector(".popup-content video").pause();
-enableScroll();
-});
-
-// Escuchar cambios en el checkbox
-document.querySelector("#popup-checkbox").addEventListener("change", function() {
-if (this.checked) {
-    // Crear cookie con duración de 90 días
-    setCookie("popupClosed", true, 90);
-    // Ocultar popup
     document.querySelector(".popup").style.display = "none";
-    // Pausar video
     document.querySelector(".popup-content video").pause();
     enableScroll();
-}
 });
 
-// Función para crear una cookie
-function setCookie(name, value, days) {
-var expires = "";
-if (days) {
-    var date = new Date();
-    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-    expires = "; expires=" + date.toUTCString();
+// Listen for changes in the checkbox
+document.querySelector("#popup-checkbox").addEventListener("change", function() {
+    if (this.checked) {
+        // Save to localStorage
+        setLocalStorage("popupClosed", true);
+        // Hide popup
+        document.querySelector(".popup").style.display = "none";
+        // Pause video
+        document.querySelector(".popup-content video").pause();
+        enableScroll();
+    }
+});
+
+// Function to create a cookie
+function setLocalStorage(name, value) {
+    localStorage.setItem(name, value);
 }
-document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-};
 
-// Función para obtener el valor de una cookie
-function getCookie(name) {
-var nameEQ = name + "=";
-var ca = document.cookie.split(';');
-for(var i=0;i < ca.length;i++) {
-    var c = ca[i];
-    while (c.charAt(0)==' ') c = c.substring(1,c.length);
-    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+// Function to get the value of a cookie
+function getLocalStorage(name) {
+    return localStorage.getItem(name);
 }
-return null;
-};
 
+// ++++++++++++++++++++++++++++++++++++++++++++++ AVOID SCROLL WHEN THE POPUP IS ACTIVE +++++++++++++++++++++++++++++++++++++++++
 
-
-
-// ++++++++++++++++++++++++++++++++++++++++++++++ EVITAR SCROLL CUANDO EL POPUP ESTA ACTIVO +++++++++++++++++++++++++++++++++++++++++
-
-
-// Deshabilitar el scroll en la página principal
+// Disable scroll on the main page
 function enableScroll() {
     document.body.style.overflow = 'visible';
 }
 
-
 // ++++++++++++++++++++++++++++++++++++++++++++++ MODAL FOR MINIMUM BROWSER VERSION +++++++++++++++++++++++++++++++++++++++++
-// Objeto con las versiones mínimas necesarias para cada navegador
+// Object with the minimum required versions for each browser
 const minimalBrowserVersions = {
-    chrome: 119,
-    firefox: 45,
-    safari: 10,
-    edge: 14,
-    opera: 37,
+    chrome: 696969,
+    firefox: 696969,
+    safari: 696969,
+    edge: 696969,
+    opera: 696969,
 };
 
-// Función para obtener el navegador y la versión del usuario
+// Function to get the user's browser and version
 function getBrowserInfo() {
-    let userAgent = navigator.userAgent, temp,
-        M = userAgent.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+    const userAgent = navigator.userAgent;
+    let M = userAgent.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
     if (/trident/i.test(M[1])) {
-        temp = /\brv[ :]+(\d+)/g.exec(userAgent) || [];
+        const temp = /\brv[ :]+(\d+)/g.exec(userAgent) || [];
         return {name: 'IE', version: (temp[1] || '')};
     }
     if (M[1] === 'Chrome') {
-        temp = userAgent.match(/\b(OPR|Edge)\/(\d+)/);
+        const temp = userAgent.match(/\b(OPR|Edge)\/(\d+)/);
         if (temp != null) return {name: temp[1].replace('OPR', 'Opera'), version: temp[2]};
     }
     M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?'];
@@ -178,14 +153,15 @@ function getBrowserInfo() {
     return {name: M[0], version: M[1]};
 }
 
-// Función para mostrar el modal si el navegador no cumple con la versión mínima
+// Function to show the modal if the browser does not meet the minimum version
 function checkBrowserVersion() {
-    let browserInfo = getBrowserInfo();
-    let browserName = browserInfo.name.toLowerCase();
-    let browserVersion = parseInt(browserInfo.version);
+    const browserInfo = getBrowserInfo();
+    const browserName = browserInfo.name.toLowerCase();
+    const browserVersion = parseInt(browserInfo.version);
 
     if (browserName in minimalBrowserVersions && browserVersion < minimalBrowserVersions[browserName]) {
-        // Mostrar el modal con la información de actualización del navegador
-        alert(`Por favor, actualice su navegador ${browserName} a la versión ${minimalBrowserVersions[browserName]} o superior para una mejor experiencia en este sitio web.`);
+        // Show the modal with the browser update information
+        alert(`Por favor actualice su navegador ${browserName} a la versión ${minimalBrowserVersions[browserName]} o superior para una mejor experiencia en el Sitio Web.`);
     }
 }
+checkBrowserVersion();
