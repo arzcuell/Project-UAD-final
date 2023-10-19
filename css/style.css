@@ -17,17 +17,17 @@
     --color-bg1: #fff;
     --color-bg2: #FCD4D6;
     --color-bg-categories:#2e3267;
-    --color-bg-courses:#;
+    --color-bg-courses:#000;
     --color-bg-faqs:#2e3267;
     --color-bg-footer:#FFF;
     --color-bg-footer-copyright:#B00D13;
-    --color-bg-testimonials:#;
+    --color-bg-testimonials:#000;
     --color-black: #000;
     --color-btn-close: #B00d13;
     --color-btn1: #fff;
     --color-btn-primary: #FFF;
     --color-btn-secondary: #f75842;
-    --color-danger: ##f75842;
+    --color-danger: #f75842;
     --color-danger-variant: rgba(247,88,66,0.4);
     --color-header-bg: #B00D13;
     --color-light: rgba(253, 253, 253, 0.7);
@@ -51,10 +51,9 @@
     --font-color-socials: #000;
     --footer-bg: #B00D13;
     --hover-btn-primary: #f75842;
-    --hover-btn-secondary: #;
+    --hover-btn-secondary: #000;
     --hover-font-btn-secondary: #f75842;
     --light-bg: #FEEFEF;
-    --light-bg: #FFF;
     --textured-bg: url(/assets/images/bg-texture.png);
     --transition: all 400ms ease;
 }
