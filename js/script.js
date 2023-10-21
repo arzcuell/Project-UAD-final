@@ -1,3 +1,4 @@
+
 // change navbar style on scroll
 window.addEventListener('scroll', () => {
     document.querySelector('nav').classList.toggle('window-scroll',window.scrollY>0);
@@ -77,7 +78,6 @@ if(localStorage.getItem('dark-theme') === 'true') {
     icon.innerHTML = "<i class='uil uil-moon'></i>";
 };
 
-// Show popup if the cookie does not exist
 // Show popup if the localStorage item does not exist
 window.addEventListener('load', function() {
     setTimeout(function() {
@@ -101,20 +101,15 @@ document.querySelector("#popup-checkbox").addEventListener("change", function() 
     if (this.checked) {
         // Save to localStorage
         setLocalStorage("popupClosed", true);
-        // Hide popup
-        document.querySelector(".popup").style.display = "none";
-        // Pause video
-        document.querySelector(".popup-content video").pause();
-        enableScroll();
     }
 });
 
-// Function to create a cookie
+// Function to create a local storage
 function setLocalStorage(name, value) {
     localStorage.setItem(name, value);
 }
 
-// Function to get the value of a cookie
+// Function to get the value of a local storage
 function getLocalStorage(name) {
     return localStorage.getItem(name);
 }
@@ -129,11 +124,11 @@ function enableScroll() {
 // ++++++++++++++++++++++++++++++++++++++++++++++ MODAL FOR MINIMUM BROWSER VERSION +++++++++++++++++++++++++++++++++++++++++
 // Object with the minimum required versions for each browser
 const minimalBrowserVersions = {
-    chrome: 696969,
-    firefox: 696969,
-    safari: 696969,
-    edge: 696969,
-    opera: 696969,
+    chrome: 46,
+    firefox: 75,
+    safari: 11,
+    edge: 79,
+    opera: 33,
 };
 
 // Function to get the user's browser and version

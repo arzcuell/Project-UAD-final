@@ -469,5 +469,8 @@
         "Voluptatem",
         "waviy"
     ],
-    "cSpell.language": "en,es-ES,es"
+    "cSpell.language": "en,es-ES,es",
+    "cSpell.ignoreWords": [
+        "faqs"
+    ]
 }
