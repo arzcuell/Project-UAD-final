@@ -1,7 +1,6 @@
 
 :root {
     --bg-color-red-lightBlue: #B00D13;
-
 }
 
 .dark-theme {
@@ -9,19 +8,18 @@
 }
 
 main {
+    margin: auto;
     max-width: 80vw;
-    margin: auto
 }
 
 h2 {
     font-size: 3rem;
     margin-top: 7rem;
 }
+
 h4 {
     font-size: 1.5rem;
 }
-
-
 
 nav {
     background-color: var(--bg-color-red-lightBlue);
@@ -30,59 +28,17 @@ nav {
 ol {
     margin: 3rem 0;
 }
-.nav__container {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--bg-color-red-lightBlue);
-    height: 100%;
-    align-items: center; 
-}
-
-.contact__container {
-    background: var(--color-bg1);
-    padding: 4rem;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    gap: 4rem;
-    height: 30rem;
-    margin: 7rem auto;
-    border-radius: 1rem;
-}
-
-
-.cintillo {
-    max-width: 70vw;
-    margin:auto;
-}
-
-.crs > img {
-    margin-bottom: 4rem;;
-}
-
-
-.crs__info p{
-    font-size: 1.3rem;
-    max-width: 70vw;
-    margin: 1rem 0;
-    text-align: justify;
-}
-
-
-
-
-
-
 
 article {
     margin: 5rem 0;
 }
 
 table {
-    width: 50vw;
     border-collapse: collapse;
-    margin: 4rem auto;
-    white-space: nowrap;
     font-size: 1.6rem;
+    margin: 4rem auto;
+    width: 50vw;
+    white-space: nowrap;
 }
 
 th, td {
@@ -96,22 +52,56 @@ th {
     color: var(--color-white)
 }
 
+span {
+    font-weight: bolder;
+}
+.nav__container {
+    align-items: center; 
+    background-color: var(--bg-color-red-lightBlue);
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.contact__container {
+    background: var(--color-bg1);
+    border-radius: 1rem;
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 40% 60%;
+    height: 30rem;
+    margin: 7rem auto;
+    padding: 4rem;
+}
+
+.cintillo {
+    margin:auto;
+    max-width: 70vw;
+}
+
+.crs > img {
+    margin-bottom: 4rem;;
+}
+
+.crs__info p{
+    font-size: 1.3rem;
+    margin: 1rem 0;
+    max-width: 70vw;
+    text-align: justify;
+}
+
 .crs__info li {
     list-style-type: disc;
     margin-left: 3rem;
     font-size: 1.3rem;
 }
 
-span {
-    font-weight: bolder;
-}
-
 @media screen and (max-width: 1024px) {
     table {
-    width: 100%;
-    display: block;
-    overflow-x: auto;
-    font-size: 1rem;
-    margin: auto;
+        display: block;
+        font-size: 1rem;
+        margin: auto;
+        overflow-x: auto;
+        width: 100%;
 }
 }

@@ -1,23 +1,21 @@
-
-
 :root {
     --bg-color-pink-darkBlue: #FCD4D6;
-    --color-bg1: rgba(253, 253, 253, 0.7);
     --bg-color-pink-lightBlue: #FCD4D6;
     --bg-color-red-lightBlue: #B00D13;
-    --font-red-white: #B00D13;
-    --bg-color-white-darkBlue: #fff;
     --bg-color-red-orange: #B00D13;
+    --bg-color-white-darkBlue: #fff;
+    --color-bg1: rgba(253, 253, 253, 0.7);
+    --font-red-white: #B00D13;
 }
 
 .dark-theme {
     --bg-color-pink-darkBlue: #1f2641;
-    --color-bg1: #2e3267;
     --bg-color-pink-lightBlue: #6c63ff;
     --bg-color-red-lightBlue: #6c63ff;
-    --font-red-white: #FFF;
-    --bg-color-white-darkBlue: #424890;
     --bg-color-red-orange: #f75842;
+    --bg-color-white-darkBlue: #424890;
+    --color-bg1: #2e3267;
+    --font-red-white: #FFF;
 }
 
 
@@ -32,29 +30,29 @@ nav {
 }
 
 .nav__container {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--bg-color-red-lightBlue);
-    height: 100%;
     align-items: center; 
+    background-color: var(--bg-color-red-lightBlue);
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
 }
 
 .contact__container {
     background: var(--color-bg1);
-    padding: 4rem;
+    border-radius: 1rem;
     display: grid;
-    grid-template-columns: 40% 60%;
     gap: 4rem;
+    grid-template-columns: 40% 60%;
     height: 30rem;
     margin: 7rem auto;
-    border-radius: 1rem;
+    padding: 4rem;
 }
 
 
 /*=============== COURSES ============*/
 .courses {
-    padding-top: 10rem;
     background-image: none;
+    padding-top: 10rem;
 }
 
 .course img {
@@ -64,16 +62,18 @@ nav {
 .banks-section {
     padding-top: 0;
 }
+
 .course__info:hover {
     background-image: var(--textured-bg);
 }
+
 .logistic-section {
     background-image: var(--textured-bg);
 }
+
 .crs-section {
     background-image: var(--textured-bg);
 }
-
 
 
 /*=============== FOOTER ============*/
@@ -89,11 +89,9 @@ nav {
     margin-top: 4rem;
 }
 
-
-
 .bank__container {
+    align-content: center;
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
-    align-content: center;
 }
