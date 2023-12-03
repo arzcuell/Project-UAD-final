@@ -190,7 +190,8 @@ img{
     transform: translateY(0)
     }
     20% {
-        transform: translateY(-0.9SPLASH SCREEN   }
+        transform: translateY(-0.9SPLASH SCREEN)
+    }
 }
 
 
@@ -448,6 +449,7 @@ nav button#toggle-menu-btn:hover {
     border-radius: 2rem;
     padding: 2rem;
     transition: var(--transition);
+    height: 100%;
 }
 
 .category:hover {
@@ -455,27 +457,27 @@ nav button#toggle-menu-btn:hover {
     z-index: 1;
 }
 
-.category:nth-child(2) .category__icon {
+.categories__right a:nth-child(2) .category .category__icon {
     background: #AF0D7F;
     color: white;
 }
 
-.category:nth-child(3) .category__icon {
+.categories__right a:nth-child(3) .category .category__icon{
     background: #0DAFAA;
     color: white;
 }
 
-.category:nth-child(4) .category__icon {
+.categories__right a:nth-child(4) .category .category__icon {
     background: #0D13AF;
     color: white;
 }
 
-.category:nth-child(5) .category__icon {
+.categories__right a:nth-child(5) .category .category__icon {
     background: #590DAF;
     color: white;
 }
 
-.category:nth-child(6) .category__icon {
+.categories__right a:nth-child(6) .category .category__icon {
     background: #64AF0D;
     color: white;
 }
@@ -521,9 +523,20 @@ nav button#toggle-menu-btn:hover {
     width: 100%;
 }
 
+.banks-section .course {
+    box-shadow: 0 0 15px -1px #757272;
+}
+
+.banks-section .course img {
+    padding: 0 15px;
+}
+
 .course:hover{
     background: transparent;
     border-color: var(--color-primary);
+    transform: scale(1.04);
+    border: none;
+    box-shadow: 0 0 15px -1px #757272;
 }
 
 .course__info {
@@ -1180,5 +1193,5 @@ nav button#toggle-menu-btn:hover {
 
     .popup-content label {
         font-size: .5rem;
-}
+    }
 }
