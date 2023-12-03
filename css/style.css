@@ -176,7 +176,7 @@ img{
 }
 
 .waviy span {
-    animation: waviy 1s infinite;
+    animation: waviy 2s infinite;
     animation-delay: calc(.2s * var(--i));    
     color: var(--color-white);
     display: inline-block;
@@ -187,10 +187,10 @@ img{
 
 @keyframes waviy {
     0%,40%,100% {
-    transform: translateY(0)
+    transform: translateY(0px)
     }
     20% {
-        transform: translateY(-0.9SPLASH SCREEN   }
+        transform: translateY(-5px)  }
 }
 
 
