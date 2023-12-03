@@ -59,7 +59,6 @@ nav {
 
 .about__achievements-right > p {
     margin: 1.6rem 0 2.5rem;
-    text-align: justify;
 }
 
 .achievements__cards {
@@ -130,6 +129,7 @@ nav {
     padding: 2rem;
     position: relative;
     transition: var(--transition);
+    border-radius: 10px;
 }
 
 .team__member:hover {
@@ -139,6 +139,7 @@ nav {
 
 .team__member-image img {
     filter: saturate(0);
+    border-radius: 100%;
 }
 
 .team__member:hover img {

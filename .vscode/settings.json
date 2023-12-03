@@ -472,5 +472,6 @@
     "cSpell.language": "en,es-ES,es",
     "cSpell.ignoreWords": [
         "faqs"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
