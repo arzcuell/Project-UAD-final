@@ -265,4 +265,6 @@ window.addEventListener('load', function() {
 
   // Establecer tamaño máximo de alto y ancho en pixels del textarea de Contacto.html
   document.getElementById("Message").style.maxHeight = "150px";
+  document.getElementById("Message").style.minHeight = "150px";
   document.getElementById("Message").style.maxWidth = "100%";
+  document.getElementById("Message").style.minWidth = "100%";
