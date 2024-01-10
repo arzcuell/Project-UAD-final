@@ -45,7 +45,7 @@
                             <img src="./assets/images/undraw_mailbox_re_dvds.svg" alt="imagen contactos">
                         </div>
                         <h2>Contáctenos</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus modi ex possimus eum veniam vitae quibusdam eligendi nostrum amet sit.</p>
+                        <p>Para dudas y sugerencias sobre el sitio web, puede comunicarse utilizando cualquiera de la información de contacto proporcionada, o mediante el uso de la plantilla de mensajes directos. </p>
                         <ul class="contact__details">
                             <li>
                                 <i class="fa-solid fa-mobile-screen-button"></i>
@@ -75,13 +75,13 @@
 
 
                     <form action="https://formspree.io/f/xyyqpgdl" method="post" class="contact__form">
-                        <h3>Por favor rellene la siguiente información</h3>
+                        <h3>Por favor suministre la siguiente información</h3>
                         <div class="form__name">
                             <input type="text" name="First Name" placeholder="Nombres (*)" required oninvalid="this.setCustomValidity('Debe colocar sus nombres')">
                             <input type="text" name="Last Name" placeholder="Apellidos (*)" required oninvalid="this.setCustomValidity('Debe colocar sus apellidos')">
                         </div>
                         <input type="email" name="Email Address" placeholder="Correo electrónico (*)" required oninvalid="this.setCustomValidity('El correo electrónico es inválido')">
-                        <textarea name="Message" rows="7" placeholder="Mensaje (*)" required oninvalid="this.setCustomValidity('Debe colocar un mensaje')"></textarea>
+                        <textarea id="Message" name="Message" rows="7" placeholder="Mensaje (*)" required oninvalid="this.setCustomValidity('Debe colocar un mensaje')"></textarea>
                         <button type="submit" class="btn btn-primary">Enviar mensaje</button>
                     </form>
                 </div>
