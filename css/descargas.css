@@ -1,0 +1,98 @@
+
+:root {
+    --bg-color-pink-darkBlue: #FCD4D6;
+    --bg-color-pink-lightBlue: #FCD4D6;
+    --bg-color-red-lightBlue: #B00D13;
+    --bg-color-red-orange: #B00D13;
+    --bg-color-white-darkBlue: #fff;
+    --color-bg1: rgba(253, 253, 253, 0.7);
+    --font-red-white: #B00D13;
+    --textured-bg: url(/assets/images/bg-texture.png);
+}
+
+.dark-theme {
+    --bg-color-pink-darkBlue: #1f2641;
+    --bg-color-pink-lightBlue: #6c63ff;
+    --bg-color-red-lightBlue: #6c63ff;
+    --bg-color-red-orange: #f75842;
+    --bg-color-white-darkBlue: #424890;
+    --color-bg1: #2e3267;
+    --font-red-white: #FFF;
+    --textured-bg: none;
+}
+
+
+
+nav {
+  background-color: var(--bg-color-red-lightBlue);
+}
+
+ .downloads {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+    justify-items: stretch;
+    align-items: start;
+    border-color: #3e8e41 10px1rem solid;
+    margin: auto auto;
+
+ }
+ .download__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222222;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    width: 250px;
+    height: 450px;
+    margin: 16px;
+  }
+  
+  .download__card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .image_card {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  
+  .download__card div {
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .download__card h3 {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .download__card p {
+    color: #cccccc;
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .download-btn {
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .download-btn:hover {
+    background-color: #3e8e41;
+  }
