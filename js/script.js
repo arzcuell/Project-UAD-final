@@ -268,3 +268,20 @@ window.addEventListener('load', function() {
   document.getElementById("Message").style.minHeight = "150px";
   document.getElementById("Message").style.maxWidth = "100%";
   document.getElementById("Message").style.minWidth = "100%";
+
+
+  
+  // Descarga de archivos en descargas.html
+
+document.querySelectorAll('.download-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const fileUrl = this.parentElement.getAttribute('data-file-url');
+        // Crear un enlace temporal y simular la descarga del archivo
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        link.download = fileUrl.substr(fileUrl.lastIndexOf('/') + 1);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+});
