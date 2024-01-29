@@ -15,7 +15,7 @@ main {
 h2 {
     /* font-size: 3rem; */
     font-size: clamp(1.8rem, 0.2958rem + 3.0047vw, 3rem);
-    margin-top: 7rem;
+    margin-top: 5rem;
 }
 
 h4 {
@@ -84,6 +84,9 @@ span {
 
 .crs > img {
     margin-bottom: 4rem;;
+    padding-top: 0;
+    max-width: 75%;
+    margin: 0 auto 0;
 }
 
 .crs__info p{

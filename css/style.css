@@ -454,6 +454,7 @@ nav button#toggle-menu-btn:hover {
 .category:hover {
     box-shadow: 0 3rem 3rem rgba(0,0,0,0.3);
     z-index: 1;
+    transform: scale(1.02);
 }
 
 .categories__right a:nth-child(2) .category .category__icon {
@@ -533,7 +534,7 @@ nav button#toggle-menu-btn:hover {
 .course:hover{
     background: transparent;
     border-color: var(--color-primary);
-    transform: scale(1.04);
+    transform: scale(1.03);
     border: none;
     box-shadow: 0 0 15px -1px #757272;
 }
@@ -621,6 +622,10 @@ nav button#toggle-menu-btn:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+}
+
+.faqs__container article:hover {
+    transform: scale(1.01);
 }
 
 .faq{
