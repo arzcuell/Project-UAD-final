@@ -223,7 +223,8 @@ const minimalBrowserVersions = {
     opera: 33,
 };
 
-// Function to get the user's browser and version
+// ++++++++++++++++++++++++++++++++++++++++++++++ Function to get the user's browser and version +++++++++++++++++++++++++++++++++++++++++
+
 function getBrowserInfo() {
     const userAgent = navigator.userAgent;
     let M = userAgent.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
@@ -240,12 +241,13 @@ function getBrowserInfo() {
     return {name: M[0], version: M[1]};
 }
 
-// Function to show the modal if the browser does not meet the minimum version
+// ++++++++++++++++++++++++++++++++++++++++++++++ Function to show the modal if the browser does not meet the minimum version +++++++++++++++++++++++++++++++++++++++++
+
 function checkBrowserVersion() {
     const browserInfo = getBrowserInfo();
     const browserName = browserInfo.name.toLowerCase();
     const browserVersion = parseInt(browserInfo.version);
-
+    
     if (browserName in minimalBrowserVersions && browserVersion < minimalBrowserVersions[browserName]) {
         // Show the modal with the browser update information
         alert(`Por favor actualice su navegador ${browserName} a la versión ${minimalBrowserVersions[browserName]} o superior para una mejor experiencia en el Sitio Web.`);
@@ -253,30 +255,23 @@ function checkBrowserVersion() {
 }
 checkBrowserVersion();
 
-
-
-window.addEventListener('load', function() {
-    const loadingScreen = document.getElementById('loading-screen');
-    loadingScreen.classList.add('fade-out');
-});
-
-
 })
-  
-// Descarga de archivos en descargas.html
+
+// ++++++++++++++++++++++++++++++++++++++++++++++ Descarga de archivos en descargas.html +++++++++++++++++++++++++++++++++++++++++
+
 
 function downloadFile(fileUrl) {
-if (fileUrl) {
-    const link = document.createElement('a');
-    link.href = fileUrl;
-    link.download = fileUrl.substr(fileUrl.lastIndexOf('/') + 1);
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-} else {
-    console.error('File URL is empty');
-    // Aquí podrías mostrar un mensaje al usuario informando que la descarga no se pudo realizar
-}
+    if (fileUrl) {
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        link.download = fileUrl.substr(fileUrl.lastIndexOf('/') + 1);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    } else {
+        console.error('Error obteniendo el archivo, por favor comuníquese con el administrador.');
+        // Aquí podrías mostrar un mensaje al usuario informando que la descarga no se pudo realizar
+    }
 }
 
 document.querySelectorAll('.download-btn').forEach(button => {
@@ -285,3 +280,24 @@ document.querySelectorAll('.download-btn').forEach(button => {
         downloadFile(fileUrl);
     });
 });
+
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++ Function to show the splash screen +++++++++++++++++++++++++++++++++++++++++
+
+function showLoadingScreen() {
+    const loadingScreen = document.getElementById('loading-screen');
+    loadingScreen.style.display = 'flex';
+  }
+  
+  // Function to hide the splash screen
+  function hideLoadingScreen() {
+    const loadingScreen = document.getElementById('loading-screen');
+    loadingScreen.style.display = 'none';
+  }
+  
+  // Call the showLoadingScreen function when the page starts loading
+  document.addEventListener('DOMContentLoaded', showLoadingScreen);
+  
+  // Call the hideLoadingScreen function when the page has fully loaded
+  window.onload = hideLoadingScreen;
