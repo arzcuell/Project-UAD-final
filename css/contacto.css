@@ -161,6 +161,7 @@ input, textarea {
     color: var(--font-color2);
     padding: 1rem;
     width: 100%;
+    resize: none;
 }
 
 .contact__form {
@@ -187,13 +188,6 @@ input, textarea {
     margin-top: 1rem;
     width: max-content;
 } 
-
-#Message {
-    max-height: 150px;
-    min-height: 150px;
-    max-width: 100%;
-    min-width: 100%;
-}
 
 /*=============== FOOTER ============*/
 .footer__2 ul li a {
