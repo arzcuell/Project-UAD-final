@@ -259,7 +259,6 @@ checkBrowserVersion();
 
 // ++++++++++++++++++++++++++++++++++++++++++++++ Descarga de archivos en descargas.html +++++++++++++++++++++++++++++++++++++++++
 
-
 function downloadFile(fileUrl) {
     if (fileUrl) {
         const link = document.createElement('a');
@@ -270,7 +269,6 @@ function downloadFile(fileUrl) {
         document.body.removeChild(link);
     } else {
         console.error('Error obteniendo el archivo, por favor comuníquese con el administrador.');
-        // Aquí podrías mostrar un mensaje al usuario informando que la descarga no se pudo realizar
     }
 }
 
@@ -288,16 +286,16 @@ document.querySelectorAll('.download-btn').forEach(button => {
 function showLoadingScreen() {
     const loadingScreen = document.getElementById('loading-screen');
     loadingScreen.style.display = 'flex';
-  }
-  
-  // Function to hide the splash screen
-  function hideLoadingScreen() {
-    const loadingScreen = document.getElementById('loading-screen');
-    loadingScreen.style.display = 'none';
-  }
-  
-  // Call the showLoadingScreen function when the page starts loading
-  document.addEventListener('DOMContentLoaded', showLoadingScreen);
-  
-  // Call the hideLoadingScreen function when the page has fully loaded
-  window.onload = hideLoadingScreen;
+}
+
+// Function to hide the splash screen
+function hideLoadingScreen() {
+const loadingScreen = document.getElementById('loading-screen');
+loadingScreen.style.display = 'none';
+}
+
+// Call the showLoadingScreen function when the page starts loading
+document.addEventListener('DOMContentLoaded', showLoadingScreen);
+
+// Call the hideLoadingScreen function when the page has fully loaded
+window.onload = hideLoadingScreen;
