@@ -274,7 +274,6 @@ function downloadFile(fileUrl) {
         document.body.removeChild(link);
     } else {
         console.error('Error obteniendo el archivo, por favor comuníquese con el administrador.');
-        // Aquí podrías mostrar un mensaje al usuario informando que la descarga no se pudo realizar
     }
 }
 
@@ -296,8 +295,8 @@ function showLoadingScreen() {
 
 // Function to hide the splash screen
 function hideLoadingScreen() {
-    const loadingScreen = document.getElementById('loading-screen');
-    loadingScreen.style.display = 'none';
+const loadingScreen = document.getElementById('loading-screen');
+loadingScreen.style.display = 'none';
 }
 
 // Call the showLoadingScreen function when the page starts loading
@@ -305,28 +304,3 @@ document.addEventListener('DOMContentLoaded', showLoadingScreen);
 
 // Call the hideLoadingScreen function when the page has fully loaded
 window.onload = hideLoadingScreen;
-
-
-
-// ++++++++++++++++++++++++++++++++++++++++++++++ FUNCTION TO CHANGE THE FOOTER DESCRIPTION BY RESOLUTION +++++++++++++++++++++++++++++++++++++++++
-
-document.addEventListener('DOMContentLoaded', function() {
-    function updateFooterContent() {
-        var width = window.innerWidth;
-        var pTag = document.querySelector('responsive-text'); // Asegúrate de seleccionar correctamente tu etiqueta p
-
-        if (width < 768) {
-            pTag.textContent = 'Sitio Web destinado a la capacitación de las Unidades Administradoras Desconcentradas';
-        } else if (width < 900) {
-            pTag.textContent = 'Sitio Web destinado a la capacitación del recurso humano adscrito al área administrativa de las Unidades Administradoras Desconcentradas';
-        } else {
-            pTag.textContent = 'Contenido para pantallas grandes';
-        }
-    }
-
-    // Actualiza el contenido al cargar la página
-    updateFooterContent();
-
-    // Actualiza el contenido cuando se redimensiona la ventana
-    window.addEventListener('resize', updateFooterContent);
-});
