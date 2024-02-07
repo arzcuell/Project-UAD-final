@@ -277,6 +277,7 @@ nav button#toggle-menu-btn:hover {
     background: var(--color-primary);
     box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
     color: var(--color-black);
+    border-bottom: #fff solid 0.7px;
 }
 
 .nav__container {
@@ -674,6 +675,9 @@ nav button#toggle-menu-btn:hover {
     max-height: 400px;
 }
 
+.question__answer a {
+    color: var(--color-primary);
+}
 
 /* ==================== FOOTER ============================*/
 .footer {
@@ -1159,6 +1163,11 @@ nav button#toggle-menu-btn:hover {
         min-width: 320px;
     }
     
+    .categories h1 {
+        font-size: 1.7rem;
+        margin-top: 2rem;
+        text-align: center;
+    }
     .container {
         margin: 0 auto;
         width: var(--container-width-sm);
