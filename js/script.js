@@ -1,5 +1,7 @@
-window.addEventListener('DOMContentLoaded', ()=> {
+// ++++++++++++++++++++++++++++++++++++++++++++++ NAV AND FOOTER FOR EVERYBODY +++++++++++++++++++++++++++++++++++++++++
 
+
+window.addEventListener('DOMContentLoaded', ()=> {
 
 let body = document.querySelector('body');
 let nav = document.createElement('nav');
@@ -23,80 +25,79 @@ nav.innerHTML=`
         <button title="Tema claro/oscuro" id="toggle-menu-btn" type="button"><i class="uil uil-moon"></i></button>
         <button title="Abrir menú" id="open-menu-btn"><i class="uil uil-bars"></i></button>
         <button title="Cerrar menú" id="close-menu-btn"><i class="uil uil-multiply"></i></button>
-
+        
     </div>
-`
-body.appendChild(nav)
-
+        `
+    body.appendChild(nav)
+        
 let footer = document.createElement('footer');
 footer.innerHTML = `
-<footer class="footer">
+    <footer class="footer">
+                
+        <section class="container footer__container">
             
-<section class="container footer__container">
-    
-    <div class="footer__1">
-        <a href="index.html" class="footer__logo"><h4>UAD</h4></a>
-        <p>Portal destinado a la capacitación del recurso humano adscrito al área administrativa de las Unidades Administradoras Desconcentradas</p>
-    </div>
+            <div class="footer__1">
+                <a href="index.html" class="footer__logo"><h4>UAD</h4></a>
+                <p id="responsive-text">Sitio Web destinado a la capacitación del recurso humano adscrito al área administrativa de las Unidades Administradoras Desconcentradas</p>
+            </div>
 
-    <div class="footer__2">
-        <h4>Enlaces</h4>
-        <ul class="permalinks">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="acerca.html">Acerca</a></li>
-            <li><a href="categorias.html">Categorías</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </div>
+            <div class="footer__2">
+                <h4>Enlaces</h4>
+                <ul class="permalinks">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="acerca.html">Acerca</a></li>
+                    <li><a href="categorias.html">Categorías</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
 
-    <div class="footer__4">
-        
-        <h4>Contáctenos</h4>
-        
-        <div>
-            <p>+58-412-238.5742</p>
-            <p>+58-212-709.4094</p>
-            <p>uad-seniat@proton.me</p>
-        </div>
-        
-        <ul class="footer__socials">
-            <li><a href="mailto:asiste@seniat.gob.ve" title="Correo"><i class="uil uil-envelope-alt"></i></a></li>
-            <li><a href="https://www.x.com/Seniat_Oficial" title="X.com"><i class="fa-brands fa-x-twitter"></i></a></li>
-            <li><a href="https://www.instagram.com/seniat_oficial/" title="Instagram"><i class="uil uil-instagram"></i></a></li>
-            <li><a href="https://www.youtube.com/noticiasseniat" title="Youtube"><i class="uil uil-youtube"></i></a></li>
-        </ul>
+            <div class="footer__4">
+                
+                <h4>Contáctenos</h4>
+                
+                <div>
+                    <p>+58-412-238.5742</p>
+                    <p>+58-212-709.4094</p>
+                    <p>uad-seniat@proton.me</p>
+                </div>
+                
+                <ul class="footer__socials">
+                    <li><a href="mailto:asiste@seniat.gob.ve" title="Correo"><i class="uil uil-envelope-alt"></i></a></li>
+                    <li><a href="https://www.x.com/Seniat_Oficial" title="X.com"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/seniat_oficial/" title="Instagram"><i class="uil uil-instagram"></i></a></li>
+                    <li><a href="https://www.youtube.com/noticiasseniat" title="Youtube"><i class="uil uil-youtube"></i></a></li>
+                </ul>
 
-    </div>
+            </div>
 
-    <div class="footer__5">
+            <div class="footer__5">
 
-        <div>
-            <img src="./assets/images/undraw_mailbox_re_dvds.svg" alt="contacto">
-        </div>
+                <div>
+                    <img src="./assets/images/undraw_mailbox_re_dvds.svg" alt="contacto">
+                </div>
 
-    </div>
+            </div>
 
-</section>
+        </section>
 
-<section class="footer__copyright">
-    
-    <small>&copy; 2024 | Servicio Nacional Integrado de Administración Aduanera y Tributaria | G-20000303-0</small>
+        <section class="footer__copyright">
+            
+            <small>&copy; 2024 | Servicio Nacional Integrado de Administración Aduanera y Tributaria | G-20000303-0</small>
 
-</section>
+        </section>
 
-</footer>
+    </footer>
 `
-
 body.appendChild(footer)
 
+// ++++++++++++++++++++++++++++++++++++++++++++++ CHANGE NAVBAR STYLE ON SCROLL +++++++++++++++++++++++++++++++++++++++++
 
-
-// change navbar style on scroll
 window.addEventListener('scroll', () => {
     document.querySelector('nav').classList.toggle('window-scroll',window.scrollY>0);
 });
 
-//show or hide faq answer
+// ++++++++++++++++++++++++++++++++++++++++++++++ SHOW OR HIDE FAQ ANSWER +++++++++++++++++++++++++++++++++++++++++
+
 const faqs = document.querySelectorAll('.faq');
 
 faqs.forEach(faq => {
@@ -126,7 +127,8 @@ faqs.forEach(faq => {
     })
 });
 
-/* nav menu on screens less than 1024px*/
+// ++++++++++++++++++++++++++++++++++++++++++++++ NAV MENU ON SCREENS LESS THAN 1024PX +++++++++++++++++++++++++++++++++++++++++
+
 const menu = document.querySelector('.nav__menu');
 const menuBtn = document.querySelector('#open-menu-btn');
 const closeBtn = document.querySelector('#close-menu-btn');
@@ -146,7 +148,8 @@ const closeNav = () => {
 
 closeBtn.addEventListener('click', closeNav);
 
-//dark-theme
+// ++++++++++++++++++++++++++++++++++++++++++++++ DARK THEME MANAGE +++++++++++++++++++++++++++++++++++++++++
+
 const icon = document.getElementById('toggle-menu-btn');
 
 icon.onclick = function() {
@@ -170,7 +173,8 @@ if(localStorage.getItem('dark-theme') === 'true') {
     icon.innerHTML = "<i class='uil uil-moon'></i>";
 };
 
-// Show popup if the localStorage item does not exist
+// ++++++++++++++++++++++++++++++++++++++++++++++ SHOW POPUP IF LOCAL STORAGE ITEM DOES NOT EXIST +++++++++++++++++++++++++++++++++++++++++
+
 window.addEventListener('load', function() {
     setTimeout(function() {
         // Your code to open the modal goes here
@@ -223,7 +227,7 @@ const minimalBrowserVersions = {
     opera: 33,
 };
 
-// ++++++++++++++++++++++++++++++++++++++++++++++ Function to get the user's browser and version +++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++++++++++++++++++++ FUNCTION BROWSER VERSION +++++++++++++++++++++++++++++++++++++++++
 
 function getBrowserInfo() {
     const userAgent = navigator.userAgent;
@@ -241,7 +245,7 @@ function getBrowserInfo() {
     return {name: M[0], version: M[1]};
 }
 
-// ++++++++++++++++++++++++++++++++++++++++++++++ Function to show the modal if the browser does not meet the minimum version +++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++++++++++++++++++++ FUNCTION MINIMUM BROWSER VERSION +++++++++++++++++++++++++++++++++++++++++
 
 function checkBrowserVersion() {
     const browserInfo = getBrowserInfo();
@@ -257,7 +261,7 @@ checkBrowserVersion();
 
 })
 
-// ++++++++++++++++++++++++++++++++++++++++++++++ Descarga de archivos en descargas.html +++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++++++++++++++++++++ DOWNLOAD FILES SECTION +++++++++++++++++++++++++++++++++++++++++
 
 
 function downloadFile(fileUrl) {
@@ -283,21 +287,46 @@ document.querySelectorAll('.download-btn').forEach(button => {
 
 
 
-// ++++++++++++++++++++++++++++++++++++++++++++++ Function to show the splash screen +++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++++++++++++++++++++ FUNCTION TO SHOW THE SPLASH SCREEN +++++++++++++++++++++++++++++++++++++++++
 
 function showLoadingScreen() {
     const loadingScreen = document.getElementById('loading-screen');
     loadingScreen.style.display = 'flex';
-  }
-  
-  // Function to hide the splash screen
-  function hideLoadingScreen() {
+}
+
+// Function to hide the splash screen
+function hideLoadingScreen() {
     const loadingScreen = document.getElementById('loading-screen');
     loadingScreen.style.display = 'none';
-  }
-  
-  // Call the showLoadingScreen function when the page starts loading
-  document.addEventListener('DOMContentLoaded', showLoadingScreen);
-  
-  // Call the hideLoadingScreen function when the page has fully loaded
-  window.onload = hideLoadingScreen;
+}
+
+// Call the showLoadingScreen function when the page starts loading
+document.addEventListener('DOMContentLoaded', showLoadingScreen);
+
+// Call the hideLoadingScreen function when the page has fully loaded
+window.onload = hideLoadingScreen;
+
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++ FUNCTION TO CHANGE THE FOOTER DESCRIPTION BY RESOLUTION +++++++++++++++++++++++++++++++++++++++++
+
+document.addEventListener('DOMContentLoaded', function() {
+    function updateFooterContent() {
+        var width = window.innerWidth;
+        var pTag = document.querySelector('responsive-text'); // Asegúrate de seleccionar correctamente tu etiqueta p
+
+        if (width < 768) {
+            pTag.textContent = 'Sitio Web destinado a la capacitación de las Unidades Administradoras Desconcentradas';
+        } else if (width < 900) {
+            pTag.textContent = 'Sitio Web destinado a la capacitación del recurso humano adscrito al área administrativa de las Unidades Administradoras Desconcentradas';
+        } else {
+            pTag.textContent = 'Contenido para pantallas grandes';
+        }
+    }
+
+    // Actualiza el contenido al cargar la página
+    updateFooterContent();
+
+    // Actualiza el contenido cuando se redimensiona la ventana
+    window.addEventListener('resize', updateFooterContent);
+});
