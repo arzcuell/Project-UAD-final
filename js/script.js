@@ -73,7 +73,7 @@ footer.innerHTML = `
             <div class="footer__5">
 
                 <div>
-                    <img src="./assets/images/undraw_mailbox_re_dvds.svg" alt="contacto">
+                    <img src="./assets/images/undraw_mailbox_re_dvds.svg" alt="contacto" />
                 </div>
 
             </div>
@@ -89,6 +89,28 @@ footer.innerHTML = `
     </footer>
 `
 body.appendChild(footer)
+
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++ CHANGE RESPONSIVE TEXT ON FOOTER +++++++++++++++++++++++++++++++++++++++++
+
+const responsiveText = document.getElementById('responsive-text');
+const updateResponsiveText = () => {
+    if(window.innerWidth < 1024) {
+        responsiveText.textContent = 'Sitio Web destinado a la capacitación de las Unidades Administradoras Desconcentradas';
+    } else {
+        responsiveText.textContent = 'Sitio Web destinado a la capacitación del recurso humano adscrito al área administrativa de las Unidades Administradoras Desconcentradas';
+    }
+};
+
+// Llamar a updateResponsiveText al cargar la página y al cambiar el tamaño de la ventana
+updateResponsiveText();
+window.addEventListener('resize', updateResponsiveText);
+
+
+
+
+
 
 // ++++++++++++++++++++++++++++++++++++++++++++++ CHANGE NAVBAR STYLE ON SCROLL +++++++++++++++++++++++++++++++++++++++++
 
@@ -233,7 +255,7 @@ function getBrowserInfo() {
     const userAgent = navigator.userAgent;
     let M = userAgent.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
     if (/trident/i.test(M[1])) {
-        const temp = /\brv[ :]+(\d+)/g.exec(userAgent) || [];
+        const temp = /\brv[ :]+(\d+)/gi.exec(userAgent) || [];
         return {name: 'IE', version: (temp[1] || '')};
     }
     if (M[1] === 'Chrome') {
