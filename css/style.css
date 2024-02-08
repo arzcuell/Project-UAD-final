@@ -838,6 +838,7 @@ nav button#toggle-menu-btn:hover {
 
 
 /* ==================== @MEDIA FOR TABLETS ================*/
+
 @media screen and (max-width:1024px) {
     .container {
         width: var(--container-width-md);
