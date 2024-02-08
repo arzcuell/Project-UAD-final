@@ -195,17 +195,27 @@ if(localStorage.getItem('dark-theme') === 'true') {
     icon.innerHTML = "<i class='uil uil-moon'></i>";
 };
 
-// ++++++++++++++++++++++++++++++++++++++++++++++ SHOW POPUP IF LOCAL STORAGE ITEM DOES NOT EXIST +++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++++++++++++++++++++ SHOW WELCOME POPUP IF LOCAL STORAGE ITEM DOES NOT EXIST +++++++++++++++++++++++++++++++++++++++++
 
 window.addEventListener('load', function() {
     setTimeout(function() {
-        // Your code to open the modal goes here
-        if (!getLocalStorage("popupClosed")) {
-            document.querySelector(".popup").style.display = "block";
-            document.body.style.overflow = "hidden";
-        }
-    }, 1000); // 1000 milliseconds = 1 seconds
+        // Verificar ancho de pantalla para no mostrarlo en resoluciones < 600px
+        executeIfScreenWidthGreaterThan768(function() {
+            if (!getLocalStorage("popupClosed")) {
+                document.querySelector(".popup").style.display = "block";
+                document.body.style.overflow = "hidden";
+            }
+        });
+    }, 1000);
 });
+
+// ...
+
+function executeIfScreenWidthGreaterThan768(callback) {
+    if (window.innerWidth > 600) {
+        callback();
+    }
+}
 
 // Listen for click on the close button
 document.querySelector(".close-btn").addEventListener("click", function() {
