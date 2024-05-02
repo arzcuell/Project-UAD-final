@@ -327,8 +327,8 @@ function showLoadingScreen() {
 
 // Function to hide the splash screen
 function hideLoadingScreen() {
-const loadingScreen = document.getElementById('loading-screen');
-loadingScreen.style.display = 'none';
+    const loadingScreen = document.getElementById('loading-screen');
+    loadingScreen.style.display = 'none';
 }
 
 // Call the showLoadingScreen function when the page starts loading
@@ -336,3 +336,25 @@ document.addEventListener('DOMContentLoaded', showLoadingScreen);
 
 // Call the hideLoadingScreen function when the page has fully loaded
 window.onload = hideLoadingScreen;
+
+
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++ SLICE FOR THE MODULES +++++++++++++++++++++++++++++++++++++++++
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
+}
